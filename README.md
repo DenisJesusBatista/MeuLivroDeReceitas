@@ -11,4 +11,8 @@ Planning - Criando e pontuando as tarefas PARTE 1
   -Eu como usuário gostaria de me registrar no sistema para utilizar o App
   -Eu como usuário gostaria de fazer login no App
   -Eu como usuario gostaria de altera minha senha
-  
+
+
+  Planning - Criando e pontuando as tarefas PARTE 2
+
+  Criando estimativa
