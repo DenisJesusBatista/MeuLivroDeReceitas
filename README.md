@@ -16,3 +16,6 @@ Planning - Criando e pontuando as tarefas PARTE 1
   Planning - Criando e pontuando as tarefas PARTE 2
 
   Criando estimativa
+
+
+Configurando GitFlow
