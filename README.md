@@ -19,3 +19,4 @@ Planning - Criando e pontuando as tarefas PARTE 1
 
 
 Configurando GitFlow conforme documentação no card
+Criar pipeline no git
