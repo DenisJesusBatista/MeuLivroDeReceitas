@@ -21,3 +21,4 @@ Planning - Criando e pontuando as tarefas PARTE 1
 Configurando GitFlow conforme documentação no card
 Criar pipeline devazure no git
 Configurando o Sonarclound.io no GitHub com yaml
+Comando:   dotnet test /p:CollectCoverade=true /p:CoverletOutputFormat=opencover -1 trx
