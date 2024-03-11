@@ -43,6 +43,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          C:\.sonar\scanner\dotnet-sonarscanner begin /k:"denisjesusgit_denisjesus" /o:"denisjesusgit" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /c:sonar.host.url="https://sonarcloud.io"
+          C:\.sonar\scanner\dotnet-sonarscanner begin /k:"denisjesusgit_denisjesus" /o:"denisjesusgit" /c:sonar.token="${{ secrets.SONAR_TOKEN }}" /c:sonar.host.url="https://sonarcloud.io"          
           dotnet test /p:CollectCoverade=true /p:CoverletOutputFormat=opencover trx
           C:\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
