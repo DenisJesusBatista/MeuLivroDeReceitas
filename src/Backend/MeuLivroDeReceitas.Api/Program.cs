@@ -1,4 +1,6 @@
+using FluentMigrator.Runner;
 using MeuLivroDeReceitas.Domain.Extension;
+using MeuLivroDeReceitas.Infraestrutura;
 using MeuLivroDeReceitas.Infraestrutura.Migrations;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +11,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddRepositorio(builder.Configuration);
 
 var app = builder.Build();
 
@@ -31,8 +34,10 @@ app.Run();
 
 void AtualizarBaseDeDados()
 {
-    var conexao = builder.Configuration.GetConnectionString();
+    var conexao = builder.Configuration.GetConexao();
     var nomeDatabase = builder.Configuration.GetNomeDataBase();
 
     Database.CriarDatabase(conexao, nomeDatabase);
+
+    app.MigrateBancoDados();
 }
