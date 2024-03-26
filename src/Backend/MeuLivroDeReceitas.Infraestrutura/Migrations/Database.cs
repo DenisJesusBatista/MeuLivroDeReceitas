@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using MySqlConnector;
+using System;
 
 namespace MeuLivroDeReceitas.Infraestrutura.Migrations;
 
@@ -22,7 +23,18 @@ public static class Database
             minhaConexao.Execute($"CREATE DATABASE {nomeDatabase}");
         }
 
-
     }
+    public static string GetMatchCode(string conexaoComBancoDeDados, string nomeDatabase)
+    {
+
+        string sql = "SELECT MAX(match_id) FROM `data_blah`";
+        using (var connect = new MySqlConnection(conexaoComBancoDeDados))
+        using (var command = new MySqlCommand(sql, connect))
+        {
+            connect.Open();
+            return command.ExecuteScalar().ToString();
+        }
+    }
+
     
 }

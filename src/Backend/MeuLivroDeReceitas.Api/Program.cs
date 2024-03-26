@@ -2,6 +2,7 @@ using FluentMigrator.Runner;
 using MeuLivroDeReceitas.Domain.Extension;
 using MeuLivroDeReceitas.Infraestrutura;
 using MeuLivroDeReceitas.Infraestrutura.Migrations;
+using MySqlConnector;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,6 +39,7 @@ void AtualizarBaseDeDados()
     var nomeDatabase = builder.Configuration.GetNomeDataBase();
 
     Database.CriarDatabase(conexao, nomeDatabase);
+    //Database.GetMatchCode(conexao, nomeDatabase);
 
     app.MigrateBancoDados();
 }
