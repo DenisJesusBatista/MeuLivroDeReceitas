@@ -13,6 +13,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddRepositorio(builder.Configuration);
+//builder.Services.AddRepositorioPostgres(builder.Configuration);
+
 
 var app = builder.Build();
 

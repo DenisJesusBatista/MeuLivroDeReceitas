@@ -9,7 +9,7 @@ public static class MigrationExtension
     {
         using var scope = app.ApplicationServices.CreateScope();
         var runner = scope.ServiceProvider.GetRequiredService<IMigrationRunner>();
-        
+
 
         runner.ListMigrations();
 
